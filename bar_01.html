@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name='robots' content='max-image-preview:large' />
+	<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+
+	<title>積上棒グラフtest</title>
+
+	<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/chart.js?ver=6.1.1' id='chartjs-js'></script>
+	<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0?ver=6.1.1' id='chartjs-datalabels-js'></script>
+
+	<style>
+		/* single */
+		.graph-area {
+			width: 100%;
+			max-width: 1000px;
+			padding: 20px;
+			border-radius: 20px;
+			border: solid 3px rgba(255,26,104,1);
+			background: white;
+			margin: auto;
+		}
+		.graph-area .wrap-graph {
+			height: 50vh;
+		}
+		#customLegend ul {
+			display: flex;
+			flex-wrap: wrap;
+			gap: .5em 1em;
+		}
+		#customLegend ul li {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			flex-direction: row;
+		}
+		#customLegend ul li span {
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			margin-right: .2em;
+			border-style: solid;
+			border-width: 1px;
+		}
+		#customLegend ul li p {
+			font-size: 14px;
+			color: #333;
+		}
+		#customLegend ul li.fade p {
+			color: #CCC;
+		}
+		.graph-table table {
+			border: solid 1px;
+			margin: auto;
+		}
+		.graph-table th,
+		.graph-table td {
+			padding: .5em;
+			border: solid 1px;
+		}
+	</style>
+</head>
+
+<body>
+<header id="site-header" class="p-header" role="banner">
+	<h1>積上棒グラフ：テスト</h1>
+</header>
+
+<div id="site-content">
+	<main class="container" role="main">
+		<article>
+
+			<div class="graph-content">
+
+				<div class="graph-area">
+
+					<div id="wrap-graph-971" class="wrap-graph">
+						<canvas id="bar_01_971_637b3ab146b4b" class="bar_01Chart"></canvas>
+					</div>
+
+				</div>
+
+				<script>
+					const js_chart_name = JSON.parse('"bar_01Chart971"');
+					const js_canvas_id = JSON.parse('"bar_01_971_637b3ab146b4b"');
+					const js_x_labels = JSON.parse('["2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"]');
+					const js_data_recorde = JSON.parse('[{"label":"\u4eba\u6587\u793e\u4f1a\u79d1\u5b66\u90e8","fill":"false","borderWidth":"2","pointBackgroundColor":"rgba(130,36,227,0.8)","tension":"0","backgroundColor":"rgba(130,36,227,0.8)","borderColor":"rgba(130,36,227,0.9)","data":["426","446","434","418","426","432","376","375","374","362","364","368","364"]},{"label":"\u4eba\u6587\u793e\u4f1a\u79d1\u5b66\u90e8\uff08\u591c\uff09","fill":"false","borderWidth":"2","pointBackgroundColor":"rgba(30,115,190,0.8)","tension":"0","backgroundColor":"rgba(30,115,190,0.8)","borderColor":"rgba(30,115,190,0.9)","data":["69","46","61","60","55","40","57","61","64","61","60","60","56"]},{"label":"\u6559\u80b2\u5b66\u90e8","fill":"false","borderWidth":"2","pointBackgroundColor":"rgba(129,215,66,0.8)","tension":"0","backgroundColor":"rgba(129,215,66,0.8)","borderColor":"rgba(129,215,66,0.9)","data":["411","417","410","410","407","405","305","303","304","306","308","303","304"]},{"label":"\u60c5\u5831\u5b66\u90e8","fill":"false","borderWidth":"2","pointBackgroundColor":"rgba(238,238,34,0.8)","tension":"0","backgroundColor":"rgba(238,238,34,0.8)","borderColor":"rgba(238,238,34,0.9)","data":["212","208","207","206","208","209","249","243","245","244","241","242","243"]},{"label":"\u7406\u5b66\u90e8","fill":"false","borderWidth":"2","pointBackgroundColor":"rgba(221,153,51,0.8)","tension":"0","backgroundColor":"rgba(221,153,51,0.8)","borderColor":"rgba(221,153,51,0.9)","data":["225","225","223","222","220","218","237","238","238","240","241","236","241"]},{"label":"\u5de5\u5b66\u90e8","fill":"false","borderWidth":"2","pointBackgroundColor":"rgba(221,51,51,0.8)","tension":"0","backgroundColor":"rgba(221,51,51,0.8)","borderColor":"rgba(221,51,51,0.9)","data":["560","560","553","542","548","552","564","558","554","551","557","545","558"]},{"label":"\u8fb2\u5b66\u90e8","fill":"false","borderWidth":"2","pointBackgroundColor":"rgba(178,178,178,0.8)","tension":"0","backgroundColor":"rgba(178,178,178,0.8)","borderColor":"rgba(178,178,178,0.9)","data":["158","160","154","156","156","162","183","187","194","186","183","186","186"]},{"label":"\u5730\u57df\u5275\u9020\u5b66\u74b0","fill":"false","borderWidth":"2","pointBackgroundColor":"rgba(0,0,0,0.8)","tension":"0","backgroundColor":"rgba(0,0,0,0.8)","borderColor":"rgba(0,0,0,0.9)","data":["0","0","0","0","0","0","52","51","50","50","51","51","52"]}]');
+				</script>
+			</div>
+
+
+			<div class="graph-table">
+				<table><thead><tr><th>項目名／年度</th><th>2010</th><th>2011</th><th>2012</th><th>2013</th><th>2014</th><th>2015</th><th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th></tr></thead><tbody><tr><th>人文社会科学部</th><td>426</td><td>446</td><td>434</td><td>418</td><td>426</td><td>432</td><td>376</td><td>375</td><td>374</td><td>362</td><td>364</td><td>368</td><td>364</td></tr><tr><th>人文社会科学部（夜）</th><td>69</td><td>46</td><td>61</td><td>60</td><td>55</td><td>40</td><td>57</td><td>61</td><td>64</td><td>61</td><td>60</td><td>60</td><td>56</td></tr><tr><th>教育学部</th><td>411</td><td>417</td><td>410</td><td>410</td><td>407</td><td>405</td><td>305</td><td>303</td><td>304</td><td>306</td><td>308</td><td>303</td><td>304</td></tr><tr><th>情報学部</th><td>212</td><td>208</td><td>207</td><td>206</td><td>208</td><td>209</td><td>249</td><td>243</td><td>245</td><td>244</td><td>241</td><td>242</td><td>243</td></tr><tr><th>理学部</th><td>225</td><td>225</td><td>223</td><td>222</td><td>220</td><td>218</td><td>237</td><td>238</td><td>238</td><td>240</td><td>241</td><td>236</td><td>241</td></tr><tr><th>工学部</th><td>560</td><td>560</td><td>553</td><td>542</td><td>548</td><td>552</td><td>564</td><td>558</td><td>554</td><td>551</td><td>557</td><td>545</td><td>558</td></tr><tr><th>農学部</th><td>158</td><td>160</td><td>154</td><td>156</td><td>156</td><td>162</td><td>183</td><td>187</td><td>194</td><td>186</td><td>183</td><td>186</td><td>186</td></tr><tr><th>地域創造学環</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>52</td><td>51</td><td>50</td><td>50</td><td>51</td><td>51</td><td>52</td></tr></tbody></table>
+			</div>
+
+		</article>
+
+	</main>
+
+</div>
+<footer id="site-footer" class="p-footer">
+
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
