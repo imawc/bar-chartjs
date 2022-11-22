@@ -46,17 +46,14 @@
 
       chart.data.datasets[0].data.forEach((datapoint, index) => {
         const datasetArray = [];
-        // const hiddenNum = [];
 
         chart.data.datasets.forEach((dataset, i) => {
           if(chart.getDatasetMeta(i).hidden) {
-            // hiddenNum.push(chart.getDatasetMeta(i).index);
             return;
           }
           datasetArray.push(dataset.data[index])
         })
         // console.log('datasetArray:', datasetArray);
-        // console.log('hiddenNum:', hiddenNum);
 
         // sum array
         function totalSum(total, values) {
@@ -70,11 +67,25 @@
         ctx.fillStyle = 'rgb(0, 0, 0)';
         ctx.textAlign = 'center';
 
-        // diffNum = data.datasets.length - datasetArray.length;
-        yNum = data.datasets.length - 1;
-        // console.log('ynum', yNum);
-
-        ctx.fillText(sum, x.getPixelForValue(index), chart.getDatasetMeta(yNum).data[index].y - 10);
+        let y = 0;
+        for (let i = 0; i < data.datasets.length; i++) {
+          const meta = chart.getDatasetMeta(i);
+          // console.log(meta, chart.legend)
+          if (meta.hidden ||
+            (y !== 0 && y < meta.data[index].y)) {
+            continue;
+          }
+          y = meta.data[index].y;
+        }
+        const fontSize = 12;
+        const margin = 10;
+        ctx.fillText(
+          sum,
+          x.getPixelForValue(index),
+          y === 0
+            ? chart.height - (chart.legend.bottom + chart.legend.top - fontSize + margin)
+            : y - margin
+        );
 
       })
     }
